@@ -1,6 +1,7 @@
 # MERN Screen Recorder - Frontend
 
 ## Overview
+
 This is the **frontend** of the MERN Screen Recorder App, built using **React.js (Vite)**. It allows users to:
 
 - Record their screen along with microphone audio.
@@ -10,6 +11,7 @@ This is the **frontend** of the MERN Screen Recorder App, built using **React.js
 The app provides a simple and user-friendly interface to manage screen recordings efficiently.
 
 ## Features
+
 - **Screen & Audio Recording:** Capture your screen and microphone simultaneously.
 - **Recording Timer:** Automatically stops recording after 3 minutes.
 - **Preview & Download:** Preview your recording before downloading.
@@ -18,6 +20,7 @@ The app provides a simple and user-friendly interface to manage screen recording
 - **Delete Recordings:** Remove recordings from both the frontend list and backend storage.
 
 ## Tech Stack
+
 - **Frontend:** React.js (Vite)
 - **Styling:** CSS, Tailwind CSS
 - **Icons:** React Icons
@@ -25,6 +28,7 @@ The app provides a simple and user-friendly interface to manage screen recording
 - **API Requests:** Fetch API
 
 ## Environment Variables
+
 Create a `.env` file at the root of the frontend folder:
 
 ```env
@@ -65,7 +69,9 @@ frontend/
 6. Open the browser at http://localhost:5173.
 
 ## Deployment
-This frontend can be deployed on Vercel or Netlify. Ensure that VITE_API_URL points to the live backend URL.
+ The frontend is deployed on Vercel at:
+    https://frontend-eta-bay-40.vercel.app
 
 ## Author
 Bommishetty Vamshi
+```
