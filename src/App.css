@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.screen-recorder-app-container {
+  background-color: #180a3e;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+  width: 100%;
+  gap: 5rem;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .screen-recorder-app-container {
+    height: 100%;
+    min-height: 100vh;
+  }
+}
+
+.app-heading {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.button-container-bg {
+  background-color: transparent;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container {
+  padding: 2rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .button-container {
+    width: 100%;
+  }
+}
+
+.button-card {
+  height: 3rem;
+  width: 3rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-recording-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #11a85c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scale-record-button {
+  animation-name: scale-record-button;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes scale-record-button {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.stop-recording-button {
+  height: 2rem;
+  width: 2rem;
+  background-color: #fa0a2a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.scale-stop-button {
+  animation-name: scale-stop-button;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scale-stop-button {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.instruction-text {
+  color: white;
+}
+
+.download-recording-button {
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.recording-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  color: white;
+  font-weight: bold;
+}
+
+.preview-container {
+  align-self: flex-start;
+  padding: 1rem;
+  width: 100%;
+}
+
+.preview-button {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-button:hover {
+  background-color: #ff8c00;
+}
+
+.popup-container {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #120b26;
+}
+
+.popup-action-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.actions-card {
+  display: flex;
+  gap: 1rem;
+}
+
+.close-button {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.video-preview-container {
+  width: 100%;
+  height: 80%;
+}
+
+.video-preview {
+  width: 100%;
+  height: 100%;
+}
+
+.recordings-list {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 1rem;
+}
+
+.heading-2 {
+  color: #ffffff;
+  font-size: x-large;
+  font-family: "Roboto", sans-serif;
+  text-align: start;
+}
+
+.recordings-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+}
+
+.recording-item {
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .recording-item {
+    width: 100%;
+  }
+
+  .recording-item video {
+    height: 80%;
+    width: 100%;
+  }
+
+  .recordings-ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recording-info {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: #513d8a;
+  flex-grow: 1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.recording-filename {
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70%;
+  font-family: "Roboto", sans-serif;
+}
+
+.delete-button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.no-recordings-text {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
