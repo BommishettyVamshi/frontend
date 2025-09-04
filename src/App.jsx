@@ -310,7 +310,7 @@ const App = () => {
                         aria-label='Download recording'>
                         <FaDownload
                           style={{
-                            fontSize: "25px",
+                            fontSize: "20px",
                             marginRight: "8px",
                             color: "#ffffff",
                           }}
@@ -363,7 +363,7 @@ const App = () => {
           <ul className='recordings-ul'>
             {recordings.map((rec) => (
               <li key={rec.id} className='recording-item'>
-                <video src={rec.url} controls />
+                <video src={rec.url} controls className="video-player"/>
                 <div className='recording-info'>
                   <p className='recording-filename'>
                     {rec.filename} — {Math.round(rec.filesize / 1024)} KB

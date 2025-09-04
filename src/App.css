@@ -190,8 +190,28 @@
 }
 
 .close-button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 2rem;
+}
+
+.download-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+}
+
+.upload-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
 }
 
 .video-preview-container {
@@ -257,6 +277,12 @@
   }
 }
 
+.video-player{
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 .recording-info {
   padding: 1rem;
   width: 100%;
@@ -284,6 +310,7 @@
   border: none;
   cursor: pointer;
   outline: none;
+  background-color: transparent;
 }
 
 .no-recordings-text {
