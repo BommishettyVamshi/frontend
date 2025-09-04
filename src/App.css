@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 .screen-recorder-app-container {
   background-color: #180a3e;
