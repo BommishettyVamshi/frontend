@@ -206,7 +206,7 @@ const App = () => {
       try {
         // Send DELETE request to backend
         const baseUrl = import.meta.env.VITE_API_URL;
-        const res = await fetch(`${baseUrl}/api/recordings/${recordId}`, {
+        const res = await fetch(`${baseUrl}api/recordings/${recordId}`, {
           method: "DELETE",
         });
         const data = await res.json(); // Parse JSON response
@@ -302,7 +302,6 @@ const App = () => {
                         className='download-button'
                         onClick={() => {
                           downloadRecording();
-                          setVideoRecordedURL(null);
                         }}
                         aria-label='Download recording'>
                         <FaDownload
