@@ -206,12 +206,9 @@ const App = () => {
       try {
         // Send DELETE request to backend
         const baseUrl = import.meta.env.VITE_API_URL;
-        const res = await fetch(
-          `${baseUrl}api/recordings/${recordId}`,
-          {
-            method: "DELETE",
-          }
-        );
+        const res = await fetch(`${baseUrl}/api/recordings/${recordId}`, {
+          method: "DELETE",
+        });
         const data = await res.json(); // Parse JSON response
 
         // Handle non-OK response
@@ -363,7 +360,7 @@ const App = () => {
           <ul className='recordings-ul'>
             {recordings.map((rec) => (
               <li key={rec.id} className='recording-item'>
-                <video src={rec.url} controls className="video-player"/>
+                <video src={rec.url} controls className='video-player' />
                 <div className='recording-info'>
                   <p className='recording-filename'>
                     {rec.filename} — {Math.round(rec.filesize / 1024)} KB
